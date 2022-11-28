@@ -1,2 +1,2 @@
 # Arsenal
- medical equipment
+ website selling medical equipment
