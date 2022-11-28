@@ -1,0 +1,372 @@
+@import "colors"
+
+html
+	font-size: 10px
+
+body
+	font-family: 'Panton', sans-serif
+	margin: 0
+	padding: 0
+button
+	color: $white
+	font-size: 18px
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	font-weight: normal
+	padding: 16px 32px
+	border: none
+	border-radius: 16px
+	background-color: $active
+	&:hover
+		cursor: pointer
+.scene
+	background: $bg-main
+	z-index: -1
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	min-height: 100vh
+	.layer
+		position: absolute
+		left: -10%
+		top: 0
+		width: 110%
+		height: 100%
+		z-index: 0
+	.layer1
+		background: url('../img/bg/bg1.png')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		background-attachment: scroll
+		background-size: cover
+	.layer2
+		background: url('../img/bg/bg2.png')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		background-attachment: scroll
+		background-size: cover
+	.layer3
+		background: url('../img/bg/bg3.png')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		background-attachment: scroll
+		background-size: cover
+select
+	border: none
+	border-radius: 16px
+	margin-top: 16px
+	padding: 15px 24px
+	width: 100%
+	font-size: 18px
+	color: $light-grey
+	appearance: none
+	background: url(../img/select_arrow.png) $white
+	background-repeat: no-repeat
+	background-position-x: 93%
+	background-position-y: 50%
+.up
+	width: 80px
+	height: 80px
+	position: absolute
+	bottom: 213px
+	right: 17px
+	cursor: pointer
+	position: fixed
+
+.main
+	padding-top: 48px
+	height: 96vh
+	.top-nav
+		.logo
+			img
+				width: 163px
+		&_menu, &_mobile_menu
+			list-style: none
+			padding: 0
+			display: flex
+			li
+				margin-right: 32px
+				&:last-child
+					margin-right: 0
+				a
+					text-decoration: none
+					font-size: 18px
+					color: $active
+		&_mobile_menu
+			justify-content: space-between
+			margin-top: 30px
+			display: none
+			li
+				font-size: 30px
+				margin-right: 0
+		.telephone
+			a
+				font-weight: 600
+				font-size: 24px
+				color: $black
+				text-decoration: none
+			&-img
+				display: none
+		&_btn
+			width: 45px
+			height: 30px
+			background: transparent
+			cursor: pointer
+			display: none
+	&_content
+		margin-top: 13rem
+		&_titles
+			h1
+				margin: 0
+				font-size: 48px
+				line-height: 130%
+				width: 80%
+			h2
+				margin-top: 24px
+				font-weight: 400
+				font-size: 24px
+				line-height: 140%
+		&_benefits
+			padding-top: 15px
+			ul
+				padding-left: 22px 
+				list-style-image: url(../img/check_mark.svg)
+				li
+					font-size: 18px
+					color: $active
+					padding-left: 17px
+					line-height: 170%
+			.btn_request
+				margin-top: 8rem
+.products
+	padding-top: 80px
+	padding-bottom: 80px
+	background-color: $white
+	h2
+		margin: 0
+		font-size: 40px
+		line-height: 140%
+		font-weight: 600
+		text-align: center
+		margin-bottom: 60px
+	.product_cards
+		margin-bottom: 65px
+		.product_card
+			display: block
+			text-decoration: none
+			color: $grey
+			padding: 5px
+			&:hover
+				.product_card-name
+					color: $active
+			&-image
+				width: 100%
+			&-name
+				font-weight: 700
+				font-size: 18px
+				line-height: 150%
+				margin: 0
+				transition: 0.2s
+			&-description
+				font-weight: 400
+				font-size: 16px
+				line-height: 150%
+				margin-top: 8px
+				margin-bottom: 8px
+			&-count
+				margin: 0
+				font-weight: 400
+				font-size: 16px
+				span
+					color: $active-green
+					font-weight: 700
+					margin-left: 8px
+			&-price
+				font-weight: 700
+				font-size: 24px
+				s
+					color: $light-grey
+					margin-left: 16px
+			button
+				font-size: 14px
+				padding: 16px
+				background-color: $white
+				color: $active
+				border: 2px solid $active
+				transition: 0.2s
+				&:hover
+					background-color: lighten($active, 15%)
+					color: white
+	.catalog_btn
+		display: flex
+		justify-content: center
+		color: $active
+		font-weight: 600
+		font-size: 18px
+		letter-spacing: 0.05em
+.questions
+	padding-top: 80px
+	padding-bottom: 80px
+	background-color: $active
+	h2
+		text-align: center
+		color: $white
+		font-size: 40px
+		margin-bottom: 48px
+		margin-top: 0
+	.question_block
+		background-color: $bgc-grey
+		padding: 32px
+		margin: 10px
+		border-radius: 16px
+		box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15)
+		height: 360px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		a
+			width: 100%
+			display: block
+		&-title
+			color: $active
+			text-align: center
+			font-weight: 600
+			font-size: 22px
+			line-height: 150%
+			margin: 0
+			margin-bottom: 16px
+		&-selects
+			margin-bottom: 80px
+		&-btn
+			width: 100%
+		&-pdf_image
+			position: relative
+			top: 29px
+			width: 227px
+			height: 280px
+			z-index: 0
+		.pdf_btn
+			z-index: 1
+			position: relative
+			bottom: 55px
+		&-experts
+			button
+				width: 80px
+				height: 80px
+				border-radius: 100px
+				margin-right: 8px
+				background-color: $bgc-grey
+				background-size: cover
+				&:last-child
+					margin-right: 0
+			.question_block-expert-1
+				background-image: url(../img/contacts/expert1.png)
+				
+			.question_block-expert-2
+				background-image: url(../img/contacts/expert2.png)
+			.question_block-expert-3
+				background-image: url(../img/contacts/expert3.png)
+			.block-active
+				border: 3px solid $active
+			.block-disable
+				border: none
+		&-contacts
+			font-size: 18px
+			line-height: 170%
+			p
+				margin: 0
+				text-align: center
+.forms
+	padding-top: 80px
+	background: $bg-main
+	min-height: 89vh
+	&_exit
+		position: absolute
+		display: block
+		padding: 10px
+		right: 25px
+		top: 25px
+	h1
+		font-weight: 700
+		font-size: 48px
+		line-height: 140%
+		text-align: center
+		margin: 0
+	p
+		margin-top: 62px
+		font-weight: 400
+		font-size: 18px
+		line-height: 170%
+	.arsenal_inputs
+		padding-top: 51px
+		input, textarea
+			margin-bottom: 24px
+			border: 1px solid $input-border
+			border-radius: 16px
+			padding: 24px 12px 24px 12px
+			font-size: 18px
+			color: $grey
+	.product_contacts_form
+		.arsenal_inputs
+			padding-top: 22px
+		button
+			margin-left: -7.5px
+	.product_info_form
+		margin-top: 62px
+		.product_info-title
+			margin-top: 29px	
+			font-weight: 600
+			font-size: 22px
+			line-height: 150%
+		.product_info-description
+			margin-top: 17px
+			font-weight: 400
+			font-size: 14px
+			line-height: 150%
+		.product_info-price
+			margin-top: 26px
+			font-weight: 700
+			font-size: 24px
+			line-height: 100%
+			border: 1px solid $black
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+			s
+				margin-left: 16px
+				color: $light-grey
+
+
+
+	
+	button
+		margin: 0 auto
+		display: block
+		margin-top: 10px
+	select
+		border: 1px solid $input-border
+		color: $grey
+		padding: 24px 12px 24px 12px
+		margin-bottom: 24px
+
+@import "media"
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
